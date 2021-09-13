@@ -7,10 +7,12 @@ for j in range(1, 17):
 x = 2
 exact = -numpy.cos(x)
 error = []
+derivList = []
 
 for i in h:
 
     approxDer = (numpy.cos(x+i)-2*numpy.cos(x)+numpy.cos(x-i))/(i**2)
+    derivList.append(approxDer)
     error.append(abs(exact-approxDer))
 
 
