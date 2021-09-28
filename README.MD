@@ -2,4 +2,5 @@ This Repository is to be used for Math4610, I am assuming it is to have a place 
 
 This is the link to the task sheets for the course, https://jvkoebbe.github.io/math4610/tasksheets/toc/md/tasksheet_toc
 
-Once we have created a software manual, I will add a link to it here as well. 
+This is the link to the software manual for the programs I will write for this course
+	https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/Software%20man%20TOC.md
