@@ -1,7 +1,7 @@
 
 **Routine Name:**           smaceps
 
-**Author:** Joe Koebbe
+**Author:** Spencer Wheeler
 
 **Language:** Python
 
