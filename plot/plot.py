@@ -22,6 +22,4 @@ def plot(*args):
     plt.show()
 
 
-plot("2*x+4", "3*x**2-x+math.sin(2*x)")
-
 
