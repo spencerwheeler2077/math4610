@@ -23,3 +23,4 @@ def plot(*args):
 
 
 
+plot("x", "2*x")

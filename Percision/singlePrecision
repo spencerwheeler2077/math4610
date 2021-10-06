@@ -1,6 +1,8 @@
-def doublePrecision():
-    x = 1
-    epsilon = .5
+from numpy import float32
+
+def singlePrecision():
+    x = float32(1)
+    epsilon = float32(.5)
     for i in range(1, 100):
         xAprox = x+(epsilon)
         error = abs(x-xAprox)
