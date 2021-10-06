@@ -5,10 +5,14 @@
 
 **Language:** Python
 
-**Description/Purpose:** This routine will create a graph of given expressions.
+**Description/Purpose:** 
 
-**Input:** Input at least one algebraic expression using x, as your variable. Multiple arguments can be given as
-arguments, just seperate them with columns as such,
+This routine will create a graph of given expressions.
+
+**Input:** 
+
+Input at least one algebraic expression using x as your variable, these expressions must be a string. Multiple arguments can be given as
+arguments, just separate them with columns as such,
 
     plot("x", "2*x")
 
@@ -22,7 +26,9 @@ in this library, input it as something like the following,
 replace ing "*" with operation that you would like to use. 
 
 
-**Output:** Will create a graph, that will appear on your screen. 
+**Output:** 
+
+Will create a graph, that will appear on your screen. 
 
 **Usage/Example:**
 
@@ -30,6 +36,11 @@ The routine is just a single function that can be imported into other projects. 
 
     import */plot
 
+With this import it will import the entire folder, so in order to use the actual routine use 
+  
+    plot.plot("*")
+
+**Code:**
 
 The code for this routine is found below. 
 
