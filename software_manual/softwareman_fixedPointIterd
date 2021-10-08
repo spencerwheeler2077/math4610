@@ -35,15 +35,30 @@ Once the desired inputs are given just simply run the function. It will return a
 approximate root of the inputted function. Sometimes some approxRoots and functions, will not converge, if that is true, 
 the function may result in an overflow error. 
 
+If the routine fails to find a root with the given parameters the following message will be printed to the console. 
+
+    Failure to find root with given parameters
+
+This message does not mean that the function does not have root, but that one wasn't found, with the given limit of
+iterations. 
+
+This code may crash as well, if it is given parameters that, don't converge.
 
 **Code:**
 
-    def fixedPointIter(x0, function, maxI=1000,  tolerance=.000001):
-    for i in range(maxI):
-        x1 = x0 - function(x0)
-        error = abs(x1-x0)
-        x0 = x1
+    import math
 
-        if error <= tolerance:
-            return x1, i
+
+    def fixedPointIter(x0, function, maxI=1000,  tolerance=.000001):
+        for i in range(maxI):
+            x1 = x0 - function(x0)
+            error = abs(x1-x0)
+            x0 = x1
+    
+    
+            if error <= tolerance:
+                return x1
+        print('Failure to find root with given parameters')
+        return None
+    
 
