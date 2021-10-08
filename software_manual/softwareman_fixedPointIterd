@@ -1,0 +1,49 @@
+
+**Routine Name:** fixedPointIter
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** 
+
+This routine preforms a fixed point iteration method to find the root of a function. 
+
+**Input**
+This routine takes 4 inputs. 
+    
+    fixedPointIter(approxRoot, function, [maxIterationCount], [tolerance])
+
+approxRoot, is a number that will be fairly close to the actual root. 
+
+function, is a defined function, that needs to be passed in to the routine, an example of a viable function is
+    
+    def function(x):
+        return 2*x
+
+after defining this function pass function() in as the second parameter. 
+
+maxIterationCount is an optional parameter. This will limit the number of iterations the routine will make If 
+this parameter is it will be set as 1000 as a default. 
+
+tolerance is another optional parameter. If not defined as something else it will default to .000001 number helps
+determine the accuracy of root this routine will approximate.
+
+**Usage/Example:**
+
+Once the desired inputs are given just simply run the function. It will return a single number, this number is a
+approximate root of the inputted function. Sometimes some approxRoots and functions, will not converge, if that is true, 
+the function may result in an overflow error. 
+
+
+**Code:**
+
+    def fixedPointIter(x0, function, maxI=1000,  tolerance=.000001):
+    for i in range(maxI):
+        x1 = x0 - function(x0)
+        error = abs(x1-x0)
+        x0 = x1
+
+        if error <= tolerance:
+            return x1, i
+
