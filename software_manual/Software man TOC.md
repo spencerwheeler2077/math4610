@@ -9,3 +9,5 @@
 [plot](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_plot.md)
 
 [fixedPointIter](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_fixedPointIter.md)
+
+[bisection](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_bisection.md)
