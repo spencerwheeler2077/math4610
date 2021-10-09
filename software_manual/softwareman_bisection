@@ -1,0 +1,58 @@
+
+**Routine Name:** bisection
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** 
+
+This routine finds a root of a given function, using a bisection method. 
+
+**Input:**
+
+This routine needs four inputs to operate, 
+    
+    bisection(leftpoint, rightpoint, function, tolerance)
+
+The left point and the right point, should be x values to the left and right respectively of an estimated root.
+
+function needs to be a defined function of a variable, an example of this would be like this example below.
+
+    def functionExample(x):
+        return x**2 -4
+
+tolerance this should be a number less than 1. This will help decide how accurate of a root the routine will return. 
+
+**Output:**
+
+A single number will be the output of this function. The routine is set up to run 1000 iterations. It should be hard to
+find a function and left and right points that will not find a root in that many steps. If a root isn't found in 1000
+iterations then the following message will be printed to the terminal, and the function will return None.
+
+    Failure to find root with given parameters
+
+
+**Code:**
+
+    def bisection(a, b, function, tolerance):
+        fa = function(a)
+        fb = function(b)
+        maxI = 100
+    
+        for i in range(maxI):
+            c = (a + b) * 0.5
+            fc = function(c)
+    
+            if fa * fb < 0:
+                b = c
+                fb = fc
+    
+            else:
+                a = c
+                fa = fc
+            error = abs(b-a)
+            if error <= tolerance:
+                return c
+        print("Failure to find root with given parameters")
+        return

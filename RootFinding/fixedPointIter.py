@@ -14,8 +14,8 @@ def fixedPointIter(x0, function, maxI=1000,  tolerance=.000001):
     return None
 
 def testFunction(x):
-    return .01*(x*(math.e**(x**2*3))-7*x)
+    return .00000001*(x*(math.e**(x**2*3))-7*x)
 
 
-#print(fixedPointIter(1, testFunction, 100000, .0000000001))
+#print(fixedPointIter(2.1, testFunction, 10000000, .00000001))
 #Test line above
