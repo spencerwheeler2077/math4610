@@ -4,7 +4,7 @@ def bisection(a, b, function, tolerance):
     maxI = 100
 
     for i in range(maxI):
-        c = (a + b) * 0.5
+        c = (a + b) / 5
         fc = function(c)
 
         if fa * fb < 0:
