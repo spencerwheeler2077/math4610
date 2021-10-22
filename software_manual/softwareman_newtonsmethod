@@ -1,0 +1,58 @@
+
+**Routine Name:** NewtonsMethod
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** This routine finds roots of a given function using a Newton's method algorithm
+
+**Input:** This routine requires 5 inputs. aproxX, function, derivative, tolerance, and maxI
+
+aproxX is an approximation of the root. If you do not choose an approximation that is close enough to the real root, the 
+routine might not converge to any root. 
+
+function needs to be a defined function that takes a number input, and returns a number , and example of this would be
+this below
+    
+    def examplefunction(x)
+        return x
+
+derivative needs to a function that returns the derivative of function, like the example below would be for the example
+function defined above. 
+
+    def examplederivative(x):
+        return 1
+
+tolerance is a number, it will define how accurate the routine will be. It is not going to be as accurate as the number,
+that is inputted, but the closer the number is to 0 the more accurate the funciton will be. 
+
+maxI is the maximum number of iterations you would like the routine to run. 
+
+**Usage/Example:**
+
+This routine is meant to be imported into other projects, or routines. There is only one function found inside this
+file. 
+
+If the maximum number of Iterations is reached, and the error tolerance was never met, then the program will just return
+the latest x value it was working with. This value might not be anything close to a root, so try and check the value
+that is returned. 
+
+
+**Code:**
+
+    def NewtonsMethod(aproxX, function, derivative, tolerance, maxI):
+        x0 = aproxX
+        fx = function(x0)
+        fprimex = derivative(aproxX)
+    
+        for i in range(maxI):
+            x1 = x0 - (fx/fprimex)
+            error = abs(x1 - x0)
+            if error <= tolerance:
+                return x1
+            else:
+                x0 = x1
+                fx = function(x0)
+                fprimex = derivative(x0)
+        return x1

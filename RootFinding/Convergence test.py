@@ -15,6 +15,7 @@ def test(fList):
     plt.plot(iList, logErrorList)
     plt.show()
 
+
 def NewtonsMethod(aproxX, function, derivative, tolerance, maxI):
     x0 = aproxX
     fx = function(x0)
@@ -30,6 +31,7 @@ def NewtonsMethod(aproxX, function, derivative, tolerance, maxI):
             fx = function(x0)
             fprimex = derivative(x0)
     return error
+
 
 def secant(firstx, secondx, function, tolerance, maxI):
     x0 = firstx
@@ -52,11 +54,11 @@ def secant(firstx, secondx, function, tolerance, maxI):
 
 
 newtonList = []
-for i in range(1, 100):
-    newtonList.append(NewtonsMethod(1, PracticeFunction.practFunc,PracticeFunction.practDeriv, 0.000001, i))
+for i in range(1, 120):
+    newtonList.append(NewtonsMethod(1, PracticeFunction.practFunc, PracticeFunction.practDeriv, 0.000001, i))
 
 secantList = []
-for i in range(1, 100):
+for i in range(1, 150):
     secantList.append(secant(.5, 1, PracticeFunction.practFunc, 0.000001, i))
 
 
