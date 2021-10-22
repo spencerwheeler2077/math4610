@@ -2,7 +2,7 @@ import math
 
 
 def practFunc(x):
-    return x*math.e**(3*(x**2))-7*x
+    return x*(math.e**(3*(x**2)))-7*x
 
 
 def practDeriv(x):

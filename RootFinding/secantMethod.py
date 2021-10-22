@@ -1,13 +1,14 @@
 import PracticeFunction
 
 
-def secant(x0, x1, function, tolerance, maxI):
+def secant(firstx, secondx, function, tolerance, maxI):
+    x0 = firstx
+    x1 = secondx
     f0 = function(x0)
     f1 = function(x1)
 
-
     for i in range(maxI):
-        x2 = x1-((x1-x0)/(f1-f0))
+        x2 = x1 - (f0*((x1-x0)/(f1-f0)))
         error = abs(x2 - x1)
         if error < tolerance:
             return x2
@@ -19,5 +20,6 @@ def secant(x0, x1, function, tolerance, maxI):
 
     return None
 
-print(secant(1, 0, PracticeFunction.practFunc, .000001, 10000))
+
+#print(secant(.77, .82, PracticeFunction.practFunc, .000000001, 10000000))
 

@@ -1,6 +1,7 @@
 import numpy
 from matplotlib import pyplot as plt
 
+
 h = [1, .5]
 for j in range(1, 17):
     h.append(h[-1]/10)

@@ -1,22 +1,22 @@
-def bisection(a, b, function, tolerance):
-    fa = function(a)
-    fb = function(b)
-    maxI = 100
+import PracticeFunction
+
+
+def bisection(a, b, function, tolerance, maxI):
 
     for i in range(maxI):
-        c = (a + b) / 5
+        c = (a + b) / 2
         fc = function(c)
 
-        if fa * fb < 0:
+        if function(a) * function(b) < 0:
             b = c
-            fb = fc
 
         else:
             a = c
-            fa = fc
-        error = abs(b-a)
-        if error <= tolerance:
+
+        if abs(function(c)) < tolerance:
             return c
-    print("Failure to find root with given parameters")
-    return
+
+    return c
+
+print(bisection(.6, 1.95, PracticeFunction.practFunc, 0.1, 4))
 
