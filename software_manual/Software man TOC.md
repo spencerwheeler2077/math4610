@@ -11,3 +11,7 @@
 [fixedPointIter](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_fixedPointIter.md)
 
 [bisection](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_bisection.md)
+
+[newtonsMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_newtonsmethod.md)
+
+[secantMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_secantMethod.md)

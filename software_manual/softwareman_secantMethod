@@ -1,14 +1,55 @@
 
-**Routine Name:**
+**Routine Name:** secant
 
 **Author:** Spencer Wheeler
 
 **Language:** Python
 
 **Description/Purpose:** 
+This routine finds a root of a given function using a secant algorithm.
 
 **Input:**
+This routine needs 5 inputs which are firstx, secondx, function, tolerance, maxI.
+
+firstx and secondx are numbers, they should be approximations of the desired root. If these numbers are not given close
+enough to the root there might be problems getting the routine to converge onto the root. 
+
+function needs to be a defined function, it should take one number input, and return a number. An example of this is
+given below
+
+    def exampleFunction(x)
+        return x
+
+tolerance, is what lets the user decided how accurate the routine should be. This does not mean that the output will be 
+this tolerance off, but the closer tolerance is to zero, the more accurate the routine will be. 
+
+maxI, is the maximum number of iterations that the routine will run. 
+
 
 **Usage/Example:**
 
+This routine is meant to be imported into other projects, and used where needed. 
+
+If the maximum number of iterations is reached the routine will return None. This does not mean the function does not
+root, it might not have a root, but maybe one just couldn't be found with the given inputs. 
+
 **Code:**
+
+    def secant(firstx, secondx, function, tolerance, maxI):
+        x0 = firstx
+        x1 = secondx
+        f0 = function(x0)
+        f1 = function(x1)
+    
+        for i in range(maxI):
+            x2 = x1 - (f0*((x1-x0)/(f1-f0)))
+            error = abs(x2 - x1)
+            if error < tolerance:
+                return x2
+            else:
+                x0 = x1
+                x1 = x2
+                f0 = function(x0)
+                f1 = function(x1)
+    
+        return None
