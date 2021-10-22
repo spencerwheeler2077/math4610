@@ -21,5 +21,5 @@ def secant(firstx, secondx, function, tolerance, maxI):
     return None
 
 
-#print(secant(.77, .82, PracticeFunction.practFunc, .000000001, 10000000))
+#print(secant(-.5, -1, PracticeFunction.practFunc, .000000001, 10000000))
 

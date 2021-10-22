@@ -15,7 +15,7 @@ def NewtonsMethod(aproxX, function, derivative, tolerance, maxI):
             x0 = x1
             fx = function(x0)
             fprimex = derivative(x0)
-    return None
+    return x1
 
 
 #print(NewtonsMethod(.3, PracticeFunction.practFunc, PracticeFunction.practDeriv, .0001, 10000000))
