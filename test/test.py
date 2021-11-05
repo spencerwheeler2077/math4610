@@ -1,3 +1,4 @@
-import math
+from RootFinding import Bisection
+from RootFinding import PracticeFunction
 
-print(float(math.cos(0)))
+print(Bisection.bisection(-.5, .6, PracticeFunction.practFunc, .001, 1000))

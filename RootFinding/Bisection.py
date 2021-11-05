@@ -1,4 +1,4 @@
-import PracticeFunction
+#import PracticeFunction
 
 
 def bisection(a, b, function, tolerance, maxI):
@@ -18,5 +18,5 @@ def bisection(a, b, function, tolerance, maxI):
 
     return c
 
-print(bisection(.6, 1.95, PracticeFunction.practFunc, 0.1, 4))
+#print(bisection(.6, 1.95, PracticeFunction.practFunc, 0.1, 4))
 

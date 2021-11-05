@@ -9,6 +9,6 @@ def doublePrecision():
             print(i, "Iterations")
             print(epsilon*2) #I multipied my final epsilon by two because I used numpy to find the actual epsilon
                              # and it seems my program would always do one more iteration after it found the epsilon
-            break
+            return
         else:
             epsilon = epsilon / 2
