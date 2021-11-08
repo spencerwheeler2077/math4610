@@ -5,7 +5,7 @@ def secant(firstx, secondx, function, tolerance, maxI):
     f1 = function(x1)
 
     for i in range(maxI):
-        x2 = x1 - (f0*((x1-x0)/(f1-f0)))
+        x2 = x1 - (f1*((x1-x0)/(f1-f0)))
         error = abs(x2 - x1)
         if error < tolerance:
             return x2

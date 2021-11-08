@@ -14,6 +14,7 @@ def test(list):
     for i in kPlus1:
         logKplus.append(numpy.log(i+1))
 
+
     plt.plot(logk, logKplus)
     plt.show()
 
@@ -50,7 +51,7 @@ def secant(firstx, secondx, function, tolerance, maxI):
     kPlus1 = []
 
     for i in range(maxI):
-        x2 = x1 - (f0*((x1-x0)/(f1-f0)))
+        x2 = x1 - (f1*((x1-x0)/(f1-f0)))
         error = abs(x2 - x1)
         if i != 0:
             kPlus1.append(error)
@@ -67,6 +68,6 @@ def secant(firstx, secondx, function, tolerance, maxI):
 
     return [k, kPlus1]
 
-test(NewtonsMethod(1, PracticeFunction.practFunc, PracticeFunction.practDeriv, .001, 10))
-test(secant(.6, .9, PracticeFunction.practFunc, .001, 10))
+#test(NewtonsMethod(1, PracticeFunction.practFunc, PracticeFunction.practDeriv, .001, 10))
+test(secant(-2, 1.1, PracticeFunction.practFunc, .0000001, 7))
 

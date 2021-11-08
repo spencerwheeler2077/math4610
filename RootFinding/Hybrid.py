@@ -1,7 +1,4 @@
-import PracticeFunction
-import NewtonsMethod
-
-
+from RootFinding import NewtonsMethod
 def __bisection(a, b, function, maxI):
     """This is just like the normal bisection method but it returns c, and the new end points as well"""
 
@@ -46,7 +43,8 @@ def __checkConvergence(x0, function, derivative, tolerance):
     return e1 > e0
 
 
-def hybrid(a, b, function, derivative, x0, tolerance, MaxI):
+def hybrid(a, b, function, derivative, tolerance, MaxI):
+    x0 = (a+b)/2
     condition = __checkConvergence(x0, function, derivative, tolerance)
 
     while condition:  # this loop keeps doing bisection until newton's method begins to converge.
@@ -56,4 +54,11 @@ def hybrid(a, b, function, derivative, x0, tolerance, MaxI):
     return NewtonsMethod.NewtonsMethod(x0, function, derivative, tolerance, MaxI)
     # use Newtons method until root is found.
 
-print(hybrid(-3, 0, PracticeFunction.practFunc, PracticeFunction.practDeriv, 2, .0001, 100000))
+
+
+if __name__ == "__main__":
+    import PracticeFunction
+    import NewtonsMethod
+
+    print(hybrid(-3, 0, PracticeFunction.practFunc, PracticeFunction.practDeriv, 2, .0001, 100000))
+
