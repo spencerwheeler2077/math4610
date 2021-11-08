@@ -1,6 +1,3 @@
-import PracticeFunction
-
-
 def NewtonsMethod(aproxX, function, derivative, tolerance, maxI):
     x0 = aproxX
     fx = function(x0)
@@ -18,4 +15,6 @@ def NewtonsMethod(aproxX, function, derivative, tolerance, maxI):
     return x1
 
 
-#print(NewtonsMethod(.3, PracticeFunction.practFunc, PracticeFunction.practDeriv, .0001, 10000000))
+if __name__ == "__main__":
+    import PracticeFunction
+    print(NewtonsMethod(.3, PracticeFunction.practFunc, PracticeFunction.practDeriv, .0001, 10000000))

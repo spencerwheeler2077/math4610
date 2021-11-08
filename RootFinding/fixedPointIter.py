@@ -1,12 +1,11 @@
 import math
 
 
-def fixedPointIter(x0, function, maxI=1000,  tolerance=.000001):
+def fixedPointIter(x0, function, tolerance=.000001, maxI=1000):
     for i in range(maxI):
         x1 = x0 - function(x0)
         error = abs(x1-x0)
         x0 = x1
-
 
         if error <= tolerance:
             return x1

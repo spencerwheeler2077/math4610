@@ -1,6 +1,3 @@
-import PracticeFunction
-
-
 def secant(firstx, secondx, function, tolerance, maxI):
     x0 = firstx
     x1 = secondx
@@ -20,6 +17,7 @@ def secant(firstx, secondx, function, tolerance, maxI):
 
     return None
 
-
-#print(secant(-.5, -1, PracticeFunction.practFunc, .000000001, 10000000))
+if __name__ == "__main__":
+    import PracticeFunction
+    print(secant(-.4, -1.1, PracticeFunction.practFunc, .00001, 1000000))
 

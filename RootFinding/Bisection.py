@@ -1,11 +1,9 @@
-#import PracticeFunction
-
-
 def bisection(a, b, function, tolerance, maxI):
 
     for i in range(maxI):
         c = (a + b) / 2
-        fc = function(c)
+        fa = function(a)
+        fb = function(b)
 
         if function(a) * function(b) < 0:
             b = c
@@ -18,5 +16,7 @@ def bisection(a, b, function, tolerance, maxI):
 
     return c
 
-#print(bisection(.6, 1.95, PracticeFunction.practFunc, 0.1, 4))
+if __name__ == "__main__":
+    import PracticeFunction
+    print(bisection(.6, 1.95, PracticeFunction.practFunc, 0.1, 4))
 
