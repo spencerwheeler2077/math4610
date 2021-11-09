@@ -27,17 +27,18 @@ def main():
     print(Newtons.NewtonsMethod(middle, function, derivative, tolerance, 50),
           "Result of Newton's method")
 
-    print(Secant.secant(.2 , .5, function, 0.01, 500),
+    print(Secant.secant(middle, middle+.01, function, 0.01, 500),
           "Result of Secant method")
 
     print(Fixed.fixedPointIter(middle, fixedFunction, tolerance, 10000),
           "Result of fixed point iteration")
 
     '''
-    This was my attempt to do task 5, if you run these lines they both produce errors. 
-    print("Newton's method starting at -5", Newtons.NewtonsMethod(-5, function, derivative, tolerance, 50))
-    print("Newton's method starting at 6", Newtons.NewtonsMethod(6, function, derivative, tolerance, 50))
+    This was my attempt to do task 5, if you run these lines they both produce errors.
     '''
+    #print("Newton's method starting at -5", Newtons.NewtonsMethod(-5, function, derivative, tolerance, 50))
+    #print("Newton's method starting at 6", Newtons.NewtonsMethod(6, function, derivative, tolerance, 50))
+
     return
 
 def main2():
@@ -60,7 +61,7 @@ def main2():
 
 def main3():
 
-    print(Mega.megaHybrid(-5, 6, function, derivative, 0.001, 50))
+    print('All roots for task 5', Mega.megaHybrid(-5, 6, function, derivative, 0.001, 50))
 
 if __name__ == "__main__":
     main()
