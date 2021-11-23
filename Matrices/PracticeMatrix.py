@@ -67,28 +67,39 @@ def diagonalMatrix(numRows, lowerBound=-10, upperBound=10):
 
     return matrix
 
+def hilbertMatrix(numRows):
+    matrix = []
+    for row in range(numRows):
+        matrix.append([])
+        for col in range(numRows):
+            matrix[row].append(1/(row + col + 1))
+    return matrix
+
+
 
 
 if __name__ == "__main__":
-    print("Square Matrix")
+    print("3X3 Square Matrix")
     myMatrix = squareMatrix(3)
     for line in myMatrix:
         print(line)
     print()
-    print("Lower Triangular Matrix")
+    print("3x3 Lower Triangular Matrix")
     myMatrix = LTMatrix(3)
     for line in myMatrix:
         print(line)
     print()
-    print("Upper Triangular Matrix")
+    print("3X3 Upper Triangular Matrix")
     myMatrix = UTMatrix(3)
     for line in myMatrix:
         print(line)
     print()
-    print("Diagonal Matrix")
+    print("5X5 Diagonal Matrix")
     myMatrix = diagonalMatrix(5)
     for line in myMatrix:
         print(line)
+
+    hilbertMatrix(4)
 
 
 

@@ -27,7 +27,10 @@ def elimination(matrix):
 
 if __name__ == "__main__":
     import PracticeMatrix
-    Matrix = PracticeMatrix.squareMatrix(10, 1, 2)
+    Matrix = PracticeMatrix.squareMatrix(4, -5, 5)
+    for line in Matrix:
+        print(line)
+    print()
     elimination(Matrix)
     for line in Matrix:
         print(line)

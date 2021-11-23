@@ -1,4 +1,3 @@
-import UpperTriangular
 def LTfindSolution(matrix, bVector):
 
     numColumns = len(matrix[0])
@@ -24,6 +23,7 @@ if __name__ == "__main__":
     from PracticeMatrix import generateMatrix
     import Transpose
     matrix = Transpose.transpose(generateMatrix())
+    print(matrix)
     vector = [1, 1, 1]
     print(LTfindSolution(matrix, vector))
 
