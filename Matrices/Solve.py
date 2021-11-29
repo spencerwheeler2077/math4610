@@ -1,6 +1,7 @@
 from Matrices.Elimination import elimination as elim
 from Matrices.UpperTriangular import UTfindSolution
 from Matrices.LowerTriangular import LTfindSolution
+from Matrices.Elimination import scaledPartialPivoting as ParPivot
 
 
 class LUMatrix():
@@ -64,6 +65,18 @@ def guassian(matrix, vector):
     for row in matrix:
         bVector.append(row.pop(-1))
     return UTfindSolution(matrix, bVector)
+
+def parcialPivotingGuassian(matrix, vector):
+    '''This method is the exact same as the guassian method except it uses a scaled partial pivoting method to do
+    elimination.'''
+    for i in range(len(vector)):
+        matrix[i].append(vector[i])
+    ParPivot(matrix) # this line is what makes the difference between guassian method and this method.
+    bVector = []
+    for row in matrix:
+        bVector.append(row.pop(-1))
+    return UTfindSolution(matrix, bVector)
+
 
 
 

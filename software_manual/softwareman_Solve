@@ -1,0 +1,72 @@
+**File Name:** Solve
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** This file includes several routines to solve matrix equations. 
+
+The main routines in this file are, LUMatrix, guassian, and parcialPivotingGuassian. 
+
+**LUMatrix**
+This code creates an LU Factorization of an inputed matrix. This routine is a class, and not a method like all the other
+routines in this file. This class has a few methods that can be used in other files. It also has two private methods,
+that are used to create the LU factorization, don't worry about these methods, unless you maybe want to increase
+their efficiency. 
+
+**Input:**
+Only input needed is a matrix. The code should work with any diagonally dominate square matrix. It might work for other
+matrices, but it was not designed using methods that might not work with other matrices.  
+
+It will certainly not work if the number of elements in each sublist are not the same. 
+
+Call this routine using something like this below,
+
+    matrix = [[1, 1], [1, 2]]
+    LU = LUMatrix(matrix)
+
+**Usage/Example:**
+There are two useful methods that can be used once you initiate an instance of this class. 
+The first is solve, all this method needs is an input of a vector. Call this method using a line similar to the
+following,
+
+    b = [1, 1]
+    LU.solve(b)
+
+doing this method returns a solution for an x vector in LUx = b. 
+
+The other method is print
+
+All this method does is print the U matrix to the console. It can be called using a line like this,
+
+    LU.print()
+
+This method doesn't return anything. 
+
+
+
+
+**gaussian**
+
+This method is designed to solve a matrix equations like Ax = b. This routine uses gaussian elimination to get the
+matrix into an uppertriangular form, which then used to find a solution. 
+
+**Input:** 
+
+This routine needs two inputs, a matrix, and a vector. An example of possible inputs are shown here below, 
+
+    matrix = [[1, 2, 3] [2, 3, 4], [3, 4, 5]]
+    vector = [1, 1, 1]
+    xVector = gaussian(matrix, vector)
+
+Take note that the number of elements in your vector needs to be the same as the number of lists (or rows) in the input
+matrix. 
+
+**Output**
+This routine will return the solution vector x, to a matrix equation Ax = b. A being the input matrix, and b being input
+vector. 
+
+
+
+
+**parcialPivotingGuassian**
