@@ -9,7 +9,7 @@ for i in range(4, 11):
     bvector = vectorMultiplication(matrix, solution[:i])
     LUfactor = LU(matrix)
     solution2 = LUfactor.solve(bvector)
-    print(solution, solution2)
+    print(solution[:i], solution2)
 
 
 

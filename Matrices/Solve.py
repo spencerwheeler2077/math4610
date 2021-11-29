@@ -7,12 +7,23 @@ class LUMatrix():
     def __init__(self, matrix):
         self.matrix = matrix
         self.__multipliers = []
+        self.__L = []
+
+        for i in range(len(self.matrix)):
+            self.__L.append([])
+            for j in range(len(self.matrix[i])):
+                if i == j:
+                    self.__L[i].append(1)
+                else:
+                    self.__L[i].append(0)
+
         self.__elimination(self.matrix)
-        print()
+
+
 
 
     def solve(self, bVector):
-        c = LTfindSolution(self.matrix, bVector)
+        c = LTfindSolution(self.__L, bVector)
         solution = UTfindSolution(self.matrix, c)
         return solution
 
@@ -24,7 +35,7 @@ class LUMatrix():
     def __subtract(self, row1, row2, position):
         multiplier = row2[position]/row1[position]
         for i in range(len(row1)):
-            row2[i] = round(row2[i] - (multiplier*row1[i]), 6)
+            row2[i] = row2[i] - (multiplier*row1[i])
         self.__multipliers.append(multiplier)
 
 
@@ -38,7 +49,10 @@ class LUMatrix():
         for cols in range(len(matrix[0])):
             for rows in range(len(matrix)):
                 if rows > cols:
-                    matrix[rows][cols] = self.__multipliers.pop(0)
+                    multi = self.__multipliers.pop(0)
+                    self.__L[rows][cols] = multi
+                    #self.matrix[rows][cols] = multi
+
 
 
 

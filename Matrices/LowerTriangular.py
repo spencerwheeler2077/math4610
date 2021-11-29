@@ -24,6 +24,6 @@ if __name__ == "__main__":
     import Transpose
     matrix = Transpose.transpose(generateMatrix())
     print(matrix)
-    vector = [1, 1, 1]
+    vector = [3, 1, 1]
     print(LTfindSolution(matrix, vector))
 
