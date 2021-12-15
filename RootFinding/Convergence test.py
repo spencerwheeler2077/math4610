@@ -68,6 +68,7 @@ def secant(firstx, secondx, function, tolerance, maxI):
 
     return [k, kPlus1]
 
-#test(NewtonsMethod(1, PracticeFunction.practFunc, PracticeFunction.practDeriv, .001, 10))
-test(secant(-2, 1.1, PracticeFunction.practFunc, .0000001, 7))
+test(NewtonsMethod(1, PracticeFunction.practFunc, PracticeFunction.practDeriv, .001, 10))
+list = secant(-1.1, -0.2, PracticeFunction.practFunc, .0000000000001, 6)
+test(list)
 

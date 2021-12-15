@@ -29,21 +29,23 @@ def __exchangeRows(matrix, pos):
 
 def elimination(matrix):
     numRows = len(matrix)
-    for row in range(numRows-1):
+    for row in range(numRows):
         currentRow = matrix[row]
         __reduceRow(currentRow)
-        for nextRow in matrix[row+1:]:
-            __subtract(currentRow, nextRow, row)
+        if row < numRows:
+            for nextRow in matrix[row+1:]:
+                __subtract(currentRow, nextRow, row)
 
 
 def scaledPartialPivoting(matrix):
     numRows = len(matrix)
-    for row in range(numRows - 1):
+    for row in range(numRows):
         __exchangeRows(matrix, row)
         currentRow = matrix[row]
         __reduceRow(currentRow)
-        for nextRow in matrix[row + 1:]:
-            __subtract(currentRow, nextRow, row)
+        if row < numRows:
+            for nextRow in matrix[row + 1:]:
+                __subtract(currentRow, nextRow, row)
 
 
 if __name__ == "__main__":

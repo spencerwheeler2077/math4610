@@ -57,7 +57,7 @@ class LUMatrix():
 
 
 
-def guassian(matrix, vector):
+def gaussian(matrix, vector):
     for i in range(len(vector)):
         matrix[i].append(vector[i])
     elim(matrix)
@@ -66,9 +66,13 @@ def guassian(matrix, vector):
         bVector.append(row.pop(-1))
     return UTfindSolution(matrix, bVector)
 
-def parcialPivotingGuassian(matrix, vector):
-    '''This method is the exact same as the guassian method except it uses a scaled partial pivoting method to do
-    elimination.'''
+
+def partialPivotingGaussian(matrix, vector):
+    """
+    This method is the exact same as the guassian method except it uses a scaled partial pivoting method to do
+    elimination.
+    """
+
     for i in range(len(vector)):
         matrix[i].append(vector[i])
     ParPivot(matrix) # this line is what makes the difference between guassian method and this method.
@@ -85,7 +89,7 @@ if __name__ == "__main__":
     matrix = PracticeMatrix.diagonalMatrix(4)
     for line in matrix:
         print(line)
-    print(guassian(matrix, [1, 1, 1, 1]))
+    print(gaussian(matrix, [1, 1, 1, 1]))
     print()
 
     matrix = LUMatrix([[2, 2, 2, 1], [2, 5, 5, 3], [3, 6, 7, 4], [4, 8, 9, 6]])

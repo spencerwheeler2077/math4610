@@ -62,11 +62,41 @@ This routine needs two inputs, a matrix, and a vector. An example of possible in
 Take note that the number of elements in your vector needs to be the same as the number of lists (or rows) in the input
 matrix. 
 
-**Output**
+**Output:**
 This routine will return the solution vector x, to a matrix equation Ax = b. A being the input matrix, and b being input
 vector. 
 
 
 
 
-**parcialPivotingGuassian**
+**partialPivotingGaussian**
+
+This method is designed to solve a matrix equations like Ax = b. This routine uses a partial pivoting form of elimination
+to get the matrix into an uppertriangular form, which then used to find a solution. 
+
+**Input:** 
+
+This routine needs two inputs, a matrix, and a vector. An example of possible inputs are shown here below, 
+
+    matrix = [[1, 2, 3] [2, 3, 4], [3, 4, 5]]
+    vector = [1, 1, 1]
+    xVector = parcialPivotingGaussian(matrix, vector)
+
+Take note that the number of elements in your vector needs to be the same as the number of lists (or rows) in the input
+matrix. 
+
+This is near Identical to the gaussian method, but since it is doing partial pivoting it will give a result much more
+reliability than it the other.
+
+**Output:**
+This routine will return the solution vector x, to a matrix equation Ax = b. A being the input matrix, and b being input
+vector. 
+
+
+
+**Code:**
+
+The code/file can be found at this link,
+
+https://github.com/spencerwheeler2077/math4610/blob/main/Matrices/Solve.py
+

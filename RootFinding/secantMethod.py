@@ -19,5 +19,5 @@ def secant(firstx, secondx, function, tolerance, maxI):
 
 if __name__ == "__main__":
     import PracticeFunction
-    print(secant(-.4, -1.1, PracticeFunction.practFunc, .00001, 1000000))
+    print(secant(-1.1, -0.1, PracticeFunction.practFunc, .00001, 1000000))
 

@@ -15,3 +15,5 @@
 [newtonsMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_newtonsmethod.md)
 
 [secantMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_secantMethod.md)
+
+[Matrix Solving](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_Solve.md)

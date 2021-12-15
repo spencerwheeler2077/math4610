@@ -1,12 +1,14 @@
 from Matrices.Solve import LUMatrix as LU
 from Matrices.PracticeMatrix import hilbertMatrix
 from Matrices.Multiplication import vectorMultiplication
-from Matrices.Solve import parcialPivotingGuassian as parcialPivoting
+from Matrices.Solve import partialPivotingGaussian as parcialPivoting
 
 solution = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+errorlist = []
+errorlist2 = []
 
 #  this part below is doing task 3
-for i in range(4, 15):
+for i in range(4, 10):
     matrix = hilbertMatrix(i)
     bvector = vectorMultiplication(matrix, solution[:i])
     LUfactor = LU(matrix)
@@ -14,12 +16,16 @@ for i in range(4, 15):
     print(solution[:i], solution2)
 
     # this is calculating the error between the found solution and the original vector.
-    print(abs(solution2[0]-1))
+    totalerror = 0
+    for i in solution2:
+        totalerror += abs(1 - i)
+    print(totalerror)
+    errorlist.append(totalerror)
 
 print('hi')
 
 #  this part below is doing task 5
-for i in range(4, 15):
+for i in range(4, 10):
     matrix = hilbertMatrix(i)
     bvector = vectorMultiplication(matrix, solution[:i])
 
@@ -27,8 +33,12 @@ for i in range(4, 15):
     print(solution[:i], solution2)
 
     # this is calculating the error between the found solution and the original vector.
-    print(abs(solution2[0] - 1))
+    totalerror = 0
+    for i in solution2:
+        totalerror += abs(1 - i)
+    errorlist2.append(totalerror)
 
-
+print(errorlist)
+print(errorlist2)
 
 
