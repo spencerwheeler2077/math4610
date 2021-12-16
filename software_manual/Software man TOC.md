@@ -8,26 +8,26 @@
 
 [plot](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_plot.md)
 
-[fixedPointIter](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_fixedPointIter.md)
+[fixedPointIter](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_fixedPointIterd)
 
-[bisection](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_bisection.md)
+[bisection](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_bisection)
 
-[newtonsMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_newtonsmethod.md)
+[newtonsMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_newtonsmethod)
 
-[secantMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_secantMethod.md)
+[secantMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_secantMethod)
 
-[Matrix Solving](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_Solve.md)
+[Matrix Solving](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_Solve)
 
-[Vector Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_vector_operations.md)
+[Vector Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_vector_operations)
 
-[Vector Magnitude](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_vector_magnitudes.md)
+[Vector Magnitude](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_vector_magnitudes)
 
-[Matrix Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_operations.md)
+[Matrix Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_operations)
 
 [jacobi Iterations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_jacobi_iterations)
 
-[Power Method](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_powermethod.md)
+[Power Method](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_powermethod)
 
-[Matrix Norm](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_norm.md)
+[Matrix Norm](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_norm)
 
-[Condition number](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_condition.md)
+[Condition number](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_condition)
