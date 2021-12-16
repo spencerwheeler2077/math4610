@@ -67,12 +67,28 @@ def diagonalMatrix(numRows, lowerBound=-10, upperBound=10):
 
     return matrix
 
+
 def hilbertMatrix(numRows):
     matrix = []
     for row in range(numRows):
         matrix.append([])
         for col in range(numRows):
             matrix[row].append(1/(row + col + 1))
+    return matrix
+
+
+def diagonallyDom(numRows):
+    sizeOfMatrix = 100
+    matrix = []
+    for i in range(sizeOfMatrix):
+        row = []
+        for j in range(sizeOfMatrix):
+            if i == j:
+                row.append(sizeOfMatrix)
+            else:
+                row.append(random.randint(-1, 1))
+
+        matrix.append(row)
     return matrix
 
 

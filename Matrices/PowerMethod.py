@@ -19,8 +19,11 @@ def invPowerMethod(matrix, x0, maxIter):
     return 1/powerMethod(invMatrix, x0, maxIter)
 
 
-
-
 if __name__ == "__main__":
-    print(powerMethod([[1, 0], [0, 1]], [6, 4], 1000))
-    print(invPowerMethod([[1, 0], [0, 1]], [6, 4], 1000))
+    from Matrices.PracticeMatrix import diagonallyDom
+    matrix = diagonallyDom(100)
+    guessVector = []
+    for i in range(100):
+        guessVector.append(1)
+    print(powerMethod(matrix, guessVector, 1000))
+    print(invPowerMethod(matrix, guessVector, 1000))
