@@ -1,14 +1,36 @@
-**Routine Name:**
+**Routine Name:** JacobiIteration
 
 **Author:** Spencer Wheeler
 
 **Language:** Python
 
-**Description/Purpose:** 
+**Description/Purpose:**  This is a method that attempts to solve linear systems of equations through Jacobi Iterations.
 
-**Input:**
+**Input:** This method needs several inputs, in the end it will look something like this below,
 
-**Usage/Example:**
+    jacobi(matrix, b, x_0, tolerance, maxIter)
+
+matrix: this needs to be a list of lists of numbers. something like
+    
+    matrix = [[1, 2], [2, 2]]
+
+b: This needs to be a vector, it is the vector on the left side of the equation Ax = b. Example of possible vectors is,
+
+    b = [1, 1]
+Important to know that this should have the same number of elements as the number of rows of the input matrix. 
+
+x_0: This is the initial guess at the solution for Ax=b, this will be a vector just like b, but it might not be the same
+dimensions, it needs to have the same number of elements as the rows of the matrix. 
+
+tolerance: This is just a number, this decides how close of approximation you want, this number needs to be greater than
+zero, but should be less than 1.
+
+maxIter: This limits the number of iterations that will be done. This should just be an integer.
+
+
+**Usage/Example:** All that needs to be done to use this routine is to give valid inputs. Method will output a vector
+that will be an approximate solution to Ax = b. 
 
 **Code:**
-
+The Code for this routine can be found here,
+https://github.com/spencerwheeler2077/math4610/blob/main/Matrices/JacobiIteration.py

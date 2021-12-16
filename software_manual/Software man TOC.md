@@ -23,3 +23,5 @@
 [Vector Magnitude](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_vector_magnitudes.md)
 
 [Matrix Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_operations.md)
+
+[jacobi Iterations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_jacobi_iterations.md)
