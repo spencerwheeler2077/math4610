@@ -25,3 +25,9 @@
 [Matrix Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_operations.md)
 
 [jacobi Iterations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_jacobi_iterations)
+
+[Power Method](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_powermethod.md)
+
+[Matrix Norm](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_norm.md)
+
+[Condition number](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/condition.md)
