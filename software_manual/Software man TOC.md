@@ -30,4 +30,4 @@
 
 [Matrix Norm](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_norm.md)
 
-[Condition number](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/condition)
+[Condition number](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_condition.md)
