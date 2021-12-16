@@ -55,8 +55,6 @@ class LUMatrix():
                     #self.matrix[rows][cols] = multi
 
 
-
-
 def gaussian(matrix, vector):
     for i in range(len(vector)):
         matrix[i].append(vector[i])

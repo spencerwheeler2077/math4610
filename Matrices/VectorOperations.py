@@ -22,14 +22,16 @@ def scalar(vector, number):
 
     return newVector
 
+
 def dotProduct(vector1, vector2):
     total = 0
     for i in range(len(vector1)):
-        total += vector1[i] + vector2[i]
+        total += vector1[i] * vector2[i]
 
     return total
 
-def outerproduct(vector1,vector2):
+
+def outerProduct(vector1,vector2):
     matrix = []
 
     for i in vector1:
@@ -40,8 +42,8 @@ def outerproduct(vector1,vector2):
     return matrix
 
 
-
-
-
 if __name__ == "__main__":
-    print(outerproduct([1,2,3], [1, 2, 1, 3]))
+
+    print(dotProduct([1, 1, 1], [0, 0, 1]))
+
+    print(outerProduct([1,2,3], [1, 2, 1, 3]))
