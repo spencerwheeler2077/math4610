@@ -17,3 +17,9 @@
 [secantMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_secantMethod.md)
 
 [Matrix Solving](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_Solve.md)
+
+[Vector Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_vector_operations.md)
+
+[Vector Magnitude](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_vector_magnitudes.md)
+
+[Matrix Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_matrix_operations.md)

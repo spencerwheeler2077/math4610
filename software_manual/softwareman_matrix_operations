@@ -1,0 +1,43 @@
+**Routine Name:** MatrixOperations
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** This routine is a file that I made that holds almost all the different operations that one might
+need to do to a matrix. Meaning the methods included, are addition(), subtraction(), scalar(), transpose(),
+matrixTimesVector(), matrixTimesMatrix(). 
+
+**Input:**
+Three methods will have the same input, addition, subtraction, and matrixTimesMatrix, all these methods take 
+an input of two matrices. 
+
+Example of this 
+    
+    addition([[1, 0], [1, 1]], [[2, 1], [3, 3]])
+
+For addition and subtraction to work, the two input matrices need to have the same, dimensions.
+
+matrixTimesMatrix doesn't have that requirement, but the number of columns in the first matrix, needs to be the number
+of rows in the second matrix. If this requirement isn't met the method will return None. 
+
+The method scalar needs an input of a single matrix, and some number. One example of this is
+
+    scalar([[1, 1], [2, 1]], 5)
+
+The method Transpose needs an input of a single matrix. An example of this, 
+
+    transpose([[1, 1], [2, 0]])
+
+The method matrixTimesVector needs an input of a single matrix, and then a vector. The vector should be defined by a
+list of numbers. The vector should have the same number of elements as the number of elements in rows of the input
+matrix. An example of this is here below, 
+
+    matrixTimesVector([[1, 0], [1, 1], [2, 5]], [1, 3])
+
+**Usage/Example:**
+
+**Code:**
+
+The code for this file can be found using this link, 
+https://github.com/spencerwheeler2077/math4610/blob/main/Matrices/MatrixOperations.py

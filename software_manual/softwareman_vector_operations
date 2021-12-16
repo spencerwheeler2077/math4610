@@ -1,0 +1,40 @@
+**Routine Name:** Vector Operations
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** This routine is a file full of different Operations that might need to be done on vectors.
+The operations included are, addition, subtraction, dotProduct, outProduct, and scalar. 
+
+**Input:** For all methods found in this file, they all take the same input, except scalar. 
+
+This input is two vectors given as two lists like such,
+
+    addition([1, 2, 3], [1, 1, 1])
+These vectors can be of any size, but they have to be the same size as each other. 
+
+The only method that doesn't take this input is scalar multiplication. It takes one vector and a single number. Like,
+    
+    scalar([1, 1, 1], 12)
+
+**Usage/Example:**
+There are different usages for the different methods,
+
+addition() : adds two vectors together.
+
+subtraction(): subtracts the first vector from the second. 
+
+dotProduct(): finds the dot product between two vectors. 
+
+outProduct(): finds the outer product between two vectors, the first input vector will be the left vector in the
+multiplication. 
+
+scalar(): returns the input vector times the inputted scalar. 
+
+
+**Code:**
+The code for this routine can be found using this link below.
+
+https://github.com/spencerwheeler2077/math4610/blob/main/Matrices/VectorOperations.py
+

@@ -1,0 +1,38 @@
+
+**Routine Name:** VectorMagnitudes
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** This routine is made out of 6 methods three will solve for different magnitudes of a vector. 
+The other three will find the magnitude of an error vector that comes from two vectors. 
+
+**Input:**
+The first three methods, L1(), L2(), inf(), all need one vector as input, this vector will just be a list, like, 
+
+    L1([1, 1, 1])
+
+The other three methods, L1error(), L2error(), infError(), need two vectors as input, vectors just being a list, example
+
+    L1error([1, 2, 3], [1, 2, 2])
+
+
+**Usage/Example:**
+This is the usage of each of the different methods found in this routine, 
+
+L1() : This gives the L1 magnitude of a vector.
+
+L2() : This returns the L2 magnitude of a vector. 
+
+inf() : This returns the infinite magnitude of a vector.
+
+L1error() : This gives the L1 magnitude of the error vector between the two input vectors. 
+
+L2error() : This gives the L2 magnitude of the error vector between the two input vectors
+
+infError() : This gives the infinite magnitude of the error vector between the two input vectors. 
+
+**Code:** The code for this routine can be found using this link, 
+https://github.com/spencerwheeler2077/math4610/blob/main/Matrices/VectorMagnitudes.py
+
