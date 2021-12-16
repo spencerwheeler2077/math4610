@@ -33,7 +33,7 @@ def main():
     jacL2error2 = VectorMagnitudes.L2error(solution, jacSolution2)
     gaussL2error = VectorMagnitudes.L2error(solution, gaussSolution)
     print("The error from jacobi iterations was: ", jacL2error)
-    print("The error from jacobi iterations with higher precision was: ", jacL2error2)
+    print("The error from jacobi iterations with lower tolerance was: ", jacL2error2)
     print("The error from gaussian elimination was: ", gaussL2error)
 
 
