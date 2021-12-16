@@ -1,0 +1,75 @@
+
+**Routine Name:** PowerMethod
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** This is a routine that has two methods that will find eigenvalues of a matrix, using the power
+method, and inverse power method. There are two methods in this file, powerMethod, and invPowerMehtod. 
+powerMethod will produce the dominant eigenvalue of a matrix. 
+invPowerMethod will produce the minimum eigenvalue of a matrix.
+
+**Input:** Inputs for both methods in this file require the same inputs, matrix, x0, and maxIter.
+
+    powerMethod(matrix, x0, maxIter)/invPowerMethod(matrix, x0, maxIter)
+
+matrix needs to be a list of lists of numbers. If it is not the methods will not work. For invPowerMethod to work, the
+matrix needs to be invertible, if it is not the routine will crash.
+
+x0 is a vector. It should be a guess of what the dominant eigenvector of the input matrix. any vector should work, but
+the better the guess this vector is the less iterations that will be needed. 
+
+maxIter is just a integer. The bigger this number is the more accurate the final eigenvalue should be. 
+
+
+**Usage/Example:**
+If this file is run by itself you will get an example output of this routine. I have copied the code that runs, and it's
+output here below,
+
+example usage:
+from Matrices.PracticeMatrix import diagonallyDom
+    matrix = diagonallyDom(100)
+    guessVector = []
+    for i in range(100):
+        guessVector.append(1)
+    print(powerMethod(matrix, guessVector, 1000))
+    print(invPowerMethod(matrix, guessVector, 1000))
+
+example output:
+108.17407310994338
+91.07502755566004
+
+**Code:**
+
+    import Matrices.MatrixOperations as MO
+    import Matrices.VectorMagnitudes as VM
+    import Matrices.VectorOperations as VO
+    import Matrices.Inverse
+    
+    
+    def powerMethod(matrix, x0, numIter): # x_(k+1) = Ax/|Ax|
+        x_k = x0
+        for i in range(numIter):
+            Ax = MO.matrixTimesVector(matrix, x_k)
+            magOfAx = VM.L2(Ax)
+            x_k = VO.scalar(Ax, 1/magOfAx)
+    
+        return VO.dotProduct(Ax, x_k)/ VO.dotProduct(x_k, x_k)
+    
+    
+    def invPowerMethod(matrix, x0, maxIter):
+        invMatrix = Matrices.Inverse.inverse(matrix)
+        return 1/powerMethod(invMatrix, x0, maxIter)
+    
+    
+    if __name__ == "__main__":
+        from Matrices.PracticeMatrix import diagonallyDom
+        matrix = diagonallyDom(100)
+        guessVector = []
+        for i in range(100):
+            guessVector.append(1)
+        print(powerMethod(matrix, guessVector, 1000))
+        print(invPowerMethod(matrix, guessVector, 1000))
+
+

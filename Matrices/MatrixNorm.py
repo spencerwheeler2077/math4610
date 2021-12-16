@@ -29,6 +29,7 @@ def infNorm(matrix):
 
 
 if __name__ == "__main__":
+    import Matrices.PracticeMatrix
     print(Norm1([[1, 2],
           [1, -2],
           [1, 5]]))
@@ -36,3 +37,8 @@ if __name__ == "__main__":
     print(infNorm([[1, 2],
                  [1, -2],
                  [1, 5]]))
+
+    matrix = Matrices.PracticeMatrix.diagonallyDom(100)
+
+    print(Norm1(matrix))
+    print(infNorm(matrix))
