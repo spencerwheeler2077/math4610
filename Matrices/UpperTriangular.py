@@ -1,6 +1,6 @@
-def UTfindSolution(matrix, bVector):
+def UTfindSolution(matrixOrig, bVector):
 
-    matrix.reverse()
+    matrix = matrixOrig[::-1]
     numColumns = len(matrix[0])
     solution = []
     for i in range(numColumns):
@@ -24,4 +24,4 @@ if __name__ == "__main__":
     from PracticeMatrix import generateMatrix
     matrix = generateMatrix()
     print(matrix)
-    print(UTfindSolution(matrix, [1, 1, 1]))
+    print(UTfindSolution(matrix, [0, 0, 1]))

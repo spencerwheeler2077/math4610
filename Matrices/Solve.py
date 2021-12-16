@@ -6,30 +6,32 @@ from Matrices.Elimination import scaledPartialPivoting as ParPivot
 
 class LUMatrix():
     def __init__(self, matrix):
-        self.matrix = matrix
+        self.__matrix = matrix
         self.__multipliers = []
         self.__L = []
 
-        for i in range(len(self.matrix)):
+        for i in range(len(self.__matrix)):
             self.__L.append([])
-            for j in range(len(self.matrix[i])):
+            for j in range(len(self.__matrix[i])):
                 if i == j:
                     self.__L[i].append(1)
                 else:
                     self.__L[i].append(0)
 
-        self.__elimination(self.matrix)
+        self.__elimination(self.__matrix)
 
 
 
 
     def solve(self, bVector):
-        c = LTfindSolution(self.__L, bVector)
-        solution = UTfindSolution(self.matrix, c)
+        tempLmatrix = self.__L
+        tempMatrix = self.__matrix
+        c = LTfindSolution(tempLmatrix, bVector)
+        solution = UTfindSolution(tempMatrix, c)
         return solution
 
     def print(self):
-        for line in self.matrix:
+        for line in self.__matrix:
             print(line)
 
 
@@ -93,6 +95,8 @@ if __name__ == "__main__":
     matrix = LUMatrix([[2, 2, 2, 1], [2, 5, 5, 3], [3, 6, 7, 4], [4, 8, 9, 6]])
     matrix.print()
     print()
+    print(matrix.solve([1, 2, 3, 4]))
     print(matrix.solve([1, 1, 1, 1]))
+
 
     print()
