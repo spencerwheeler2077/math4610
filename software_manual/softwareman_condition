@@ -1,15 +1,47 @@
-
-**Routine Name:**
+**Routine Name:** Condition
 
 **Author:** Spencer Wheeler
 
 **Language:** Python
 
-**Description/Purpose:** 
+**Description/Purpose:** This routine has a single method that finds the 2 conditon number of a square matrix. 
 
-**Input:**
+**Input:** The condition method requires a single matrix as input, and an optional vector as input. 
 
-**Usage/Example:**
+If only a vector is given, the program will use an all one's vector in it's place. If you would like to use a different
+vector just make sure it has the same number of elements as the rows of the input matrix. 
+
+**Usage/Example:** At the bottom of the code of this file there is an example usage of this routine. Just run this code
+by itself, and it will run this example code. 
+
+Example usage:
+
+    matrix = matrixGen(100)
+    print(condition(matrix))
+
+Example output:
+    
+    1.176050573519082
+
 
 **Code:**
+
+    import Matrices.PowerMethod as PM
+    from Matrices.PracticeMatrix import diagonallyDom as matrixGen
+    
+    
+    def condition(matrix, x0=None):
+        if x0 is None:
+            x0 = []
+            for i in range(len(matrix[0])):
+                x0.append(1)
+        maxLambda = PM.powerMethod(matrix, x0, 1000)
+        minLambda = PM.invPowerMethod(matrix, x0, 1000)
+        return abs(maxLambda)/abs(minLambda)
+    
+    
+    if __name__ == "__main__":
+        matrix = matrixGen(100)
+        print(condition(matrix))
+
 
