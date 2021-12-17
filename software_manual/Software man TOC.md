@@ -16,6 +16,8 @@
 
 [secantMethod](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_secantMethod)
 
+[Matrix generators (PracticeMatrix)](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_practice_matrices)
+
 [Matrix Solving](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_Solve)
 
 [Vector Operations](https://github.com/spencerwheeler2077/math4610/blob/main/software_manual/softwareman_vector_operations)

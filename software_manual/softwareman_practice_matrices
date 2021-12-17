@@ -1,0 +1,172 @@
+
+**Routine Name:** PracticeMatrix
+
+**Author:** Spencer Wheeler
+
+**Language:** Python
+
+**Description/Purpose:** This file is made out of several functions that create several types of matrices. 
+There are 7 methods found in this file. These are, generateMatrix(), squareMatrix, LtMatrix, UtMatrix, diagonalMatrix, 
+hilbertMatrix, diagonallyDom(). 
+
+**Input:**
+Most of the methods in the file need different inputs. 
+
+generateMatrix(numRows, numCols): both of the inputs are just numbers. First input is the number of rows, and the second
+input is the number of columns, wanted in the resulting matrix. 
+
+squareMatrix(numRows, lowerBound, upperBound) all three inputs need to be numbers. First is number of rows desired in
+resulting matrix, and lowerBound is the smallest number that might be found in the matrix, upperBound is the largest
+number that might be found in the matrix. 
+
+LTMatrix, UTMatrix, diagonalMatrix have identical inputs as the squareMatrix method found directly above. 
+
+HilbertMatrix(numRows): needs only one input which is the number of rows desired in the resulting matrix. 
+
+diagonallyDom() method has the exact same input has HilbertMatrix.
+
+
+**description of each Method**
+generateMatrix: creates a really specific matrix, I used it for a few problems for task sheets in Math4610, it 
+produces an upper triangular matrix that follows as specific algorithm, output will depend on the size of matrix desired.
+But one set of inputs will always produce the same matrix. 
+
+squareMatrix: produces a random square matrix of desired dimensions. 
+
+LTMatrix: produces a random square lower triangular matrix of desired dimensions
+
+UTMatrix: produces a random square upper triangular matrix of desired dimensions
+
+diagonalMatrix: produces a random diagonal matrix of desired dimensions
+
+hilbertMatrix: produces a hilbert Matrix of a desired size.
+
+diagonallyDom: produces a square diagonally dominant matrix. Entries will be randomly chosen integers between -1, and 1,
+except for the diagonal entries are equal to the number of rows. 
+
+
+**Code:**
+
+    import random
+    
+    
+    def generateMatrix(numRows=3, numCols=3):
+        matrix = []
+        for i in range(numRows):
+            matrix.append([])
+            for j in range(numCols):
+                matrix[i].append(0)
+                if j < i:
+                    matrix[i][j] = 0
+                else:
+                    matrix[i][j] = i + j - 1
+    
+        return matrix
+    
+    
+    def squareMatrix(numRows, lowerBound=-10, upperBound=10):
+        matrix = []
+        for i in range(numRows):
+            matrix.append([])
+            for j in range(numRows):
+                matrix[i].append(random.randint(lowerBound, upperBound))
+    
+        return matrix
+    
+    
+    def LTMatrix(numRows, lowerBound=-10, upperBound=10):
+        matrix = []
+        for i in range(numRows):
+            matrix.append([])
+            for j in range(numRows):
+                if j <= i:
+                    matrix[i].append(random.randint(lowerBound, upperBound))
+                else:
+                    matrix[i].append(0)
+    
+        return matrix
+    
+    
+    def UTMatrix(numRows, lowerBound=-10, upperBound=10):
+        matrix = []
+        for i in range(numRows):
+            matrix.append([])
+            for j in range(numRows):
+                if j >= i:
+                    matrix[i].append(random.randint(lowerBound, upperBound))
+                else:
+                    matrix[i].append(0)
+    
+        return matrix
+    
+    
+    def diagonalMatrix(numRows, lowerBound=-10, upperBound=10):
+        matrix = []
+        for i in range(numRows):
+            matrix.append([])
+            for j in range(numRows):
+                if j == i:
+                    num = random.randint(lowerBound, upperBound)
+                    while num == 0:
+                        num = random.randint(lowerBound, upperBound)
+                    matrix[i].append(num)
+    
+                else:
+                    matrix[i].append(0)
+    
+        return matrix
+    
+    
+    def hilbertMatrix(numRows):
+        matrix = []
+        for row in range(numRows):
+            matrix.append([])
+            for col in range(numRows):
+                matrix[row].append(1/(row + col + 1))
+        return matrix
+    
+    
+    def diagonallyDom(numRows):
+        sizeOfMatrix = 100
+        matrix = []
+        for i in range(sizeOfMatrix):
+            row = []
+            for j in range(sizeOfMatrix):
+                if i == j:
+                    row.append(sizeOfMatrix)
+                else:
+                    row.append(random.randint(-1, 1))
+    
+            matrix.append(row)
+        return matrix
+    
+    
+    
+    
+    if __name__ == "__main__":
+        print("3X3 Square Matrix")
+        myMatrix = squareMatrix(3)
+        for line in myMatrix:
+            print(line)
+        print()
+        print("3x3 Lower Triangular Matrix")
+        myMatrix = LTMatrix(3)
+        for line in myMatrix:
+            print(line)
+        print()
+        print("3X3 Upper Triangular Matrix")
+        myMatrix = UTMatrix(3)
+        for line in myMatrix:
+            print(line)
+        print()
+        print("5X5 Diagonal Matrix")
+        myMatrix = diagonalMatrix(5)
+        for line in myMatrix:
+            print(line)
+    
+        hilbertMatrix(4)
+
+
+
+
+
